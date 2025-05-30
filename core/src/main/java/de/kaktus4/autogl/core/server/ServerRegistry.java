@@ -1,7 +1,5 @@
 package de.kaktus4.autogl.core.server;
 
-import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 public class ServerRegistry {
@@ -17,7 +15,13 @@ public class ServerRegistry {
             "Die Runde beginnt in 4 Sekunden",
             "Die Runde beginnt in 3 Sekunden",
             "Die Runde beginnt in 2 Sekunden",
-            "Die Runde beginnt in 1 Sekunde"
+
+            //ENGLISH
+            "The game starts in 10 seconds",
+            "The game starts in 5 seconds",
+            "The game starts in 4 seconds",
+            "The game starts in 3 seconds",
+            "The game starts in 2 seconds"
         ),
         List.of(":")
     ));
