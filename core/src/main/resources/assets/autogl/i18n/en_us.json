@@ -1,0 +1,17 @@
+{
+  "autogl": {
+    "settings": {
+      "enabled": {
+        "name": "Enabled"
+      },
+      "customMessage": {
+        "name": "Custom message",
+        "description": "Custom message which should be send"
+      },
+      "messageDelaySeconds": {
+        "name": "Delay",
+        "description": "Delay in seconds after which the message should be send"
+      }
+    }
+  }
+}
