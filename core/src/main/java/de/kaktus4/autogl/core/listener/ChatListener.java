@@ -55,9 +55,6 @@ public class ChatListener {
           continue;
         }
 
-        for (String trigger : serverConfig.getTriggerMessages()) {
-          if (plainMessage.contains(trigger)) {
-            this.addon.trySendGoodLuckMessage();
         for (Pattern trigger : serverConfig.getTriggerMessages()) {
 
           Matcher matcher = trigger.matcher(plainMessage);
