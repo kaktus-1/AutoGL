@@ -16,8 +16,8 @@ public class AutoGLConfiguration extends AddonConfig {
   @TextFieldWidget.TextFieldSetting
   private final ConfigProperty<String> customMessage = new ConfigProperty<>("gl");
 
-  @SliderWidget.SliderSetting(min = 0.0F, max = 10.0F, steps = 0.1F)
-  private final ConfigProperty<Double> messageDelaySeconds = new ConfigProperty<>(1.0);
+  @SliderWidget.SliderSetting(min = 1, max = 30, steps = 1)
+  private final ConfigProperty<Integer> messageSecondsTrigger = new ConfigProperty<>(5);
 
   @Override
   public ConfigProperty<Boolean> enabled() {
@@ -28,7 +28,7 @@ public class AutoGLConfiguration extends AddonConfig {
     return customMessage;
   }
 
-  public ConfigProperty<Double> getMessageDelaySeconds() {
-    return messageDelaySeconds;
+  public ConfigProperty<Integer> getMessageSecondsTrigger() {
+    return messageSecondsTrigger;
   }
 }
