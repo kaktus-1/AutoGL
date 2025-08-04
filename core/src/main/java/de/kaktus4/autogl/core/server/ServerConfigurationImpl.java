@@ -1,17 +1,16 @@
 package de.kaktus4.autogl.core.server;
 
 import java.util.List;
+import java.util.regex.Pattern;
 
 public class ServerConfigurationImpl implements ServerConfiguration {
 
   private final List<String> serverAddresses;
-  private final List<String> triggerMessages;
+  private final List<Pattern> triggerMessages;
   private final List<String> exclusionFilters;
 
-  public ServerConfigurationImpl(List<String> addresses, List<String> formats,
-      List<String> filters) {
-    this.serverAddresses = List.copyOf(
-        addresses); // Should be normally lower-case because of hardcoded implementation
+  public ServerConfigurationImpl(List<String> addresses, List<Pattern> formats, List<String> filters) {
+    this.serverAddresses = List.copyOf(addresses);
     this.triggerMessages = List.copyOf(formats);
     this.exclusionFilters = List.copyOf(filters);
   }
@@ -22,7 +21,7 @@ public class ServerConfigurationImpl implements ServerConfiguration {
   }
 
   @Override
-  public List<String> getTriggerMessages() {
+  public List<Pattern> getTriggerMessages() {
     return triggerMessages;
   }
 

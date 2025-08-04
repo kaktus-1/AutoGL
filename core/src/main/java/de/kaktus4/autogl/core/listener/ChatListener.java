@@ -6,6 +6,8 @@ import net.labymod.api.Laby;
 import net.labymod.api.client.network.server.ServerData;
 import net.labymod.api.event.Subscribe;
 import net.labymod.api.event.client.chat.ChatReceiveEvent;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class ChatListener {
 
@@ -56,6 +58,11 @@ public class ChatListener {
         for (String trigger : serverConfig.getTriggerMessages()) {
           if (plainMessage.contains(trigger)) {
             this.addon.trySendGoodLuckMessage();
+        for (Pattern trigger : serverConfig.getTriggerMessages()) {
+
+          Matcher matcher = trigger.matcher(plainMessage);
+          if (matcher.find()) {
+            this.addon.trySendGoodLuckMessage(matcher.group(1));
             return;
           }
         }
