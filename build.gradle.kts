@@ -8,6 +8,12 @@ val versions = providers.gradleProperty("net.labymod.minecraft-versions").get().
 group = "de.kaktus4.autogl"
 version = providers.environmentVariable("VERSION").getOrElse("1.0.0")
 
+java {
+    toolchain {
+        languageVersion.set(JavaLanguageVersion.of(21))
+    }
+}
+
 labyMod {
     defaultPackageName = "de.kaktus4.autogl" //change this to your main package name (used by all modules)
 
@@ -35,6 +41,12 @@ labyMod {
 subprojects {
     plugins.apply("net.labymod.labygradle")
     plugins.apply("net.labymod.labygradle.addon")
+
+    java {
+        toolchain {
+            languageVersion.set(JavaLanguageVersion.of(21))
+        }
+    }
 
     group = rootProject.group
     version = rootProject.version
