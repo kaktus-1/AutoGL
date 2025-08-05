@@ -5,12 +5,12 @@
         "name": "Aktiviert"
       },
       "customMessage": {
-        "name": "Eigene Nachricht",
-        "description": "Nachricht welche gesendet werden soll"
+        "name": "Eigene Nachrichten (mehrere mit Komma trennen)",
+        "description": "Nachrichten, die gesendet werden sollen. Eine zufällige Nachricht wird ausgewählt."
       },
-      "messageDelaySeconds": {
-        "name": "Delay",
-        "description": "Verzögerung in Sekunden, wann die AutoGL Nachricht gesendet werden soll"
+      "messageSecondsTrigger": {
+        "name": "Sekunden vor Rundenstart",
+        "description": "Wie viele Sekunden vor Rundenstart die Nachricht gesendet werden soll."
       }
     }
   }
